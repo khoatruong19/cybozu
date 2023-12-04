@@ -1,0 +1,34 @@
+{
+  "name": "miraijr/basic",
+  "description": "the project is created to help me learn how php core mvc work",
+  "license": "MIT",
+  "scripts": {
+    "fix": "php-cs-fixer fix",
+    "start": [
+      "Composer\\Config::disableProcessTimeout",
+      "php -S localhost:8080 -t public/"
+    ],
+    "install": "composer dump-autoload"
+  },
+  "autoload": {
+    "psr-4": {
+      "core\\": "src/core",
+      "shared\\": "src/shared",
+      "modules\\": "src/modules"
+    }
+  },
+  "authors": [
+    {
+      "name": "miraijr"
+    }
+  ],
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.37"
+  },
+  "require": {
+    "vlucas/phpdotenv": "^5.5",
+    "php-di/php-di": "^7.0",
+    "firebase/php-jwt": "^6.9",
+    "cloudinary/cloudinary_php": "^2"
+  }
+}
